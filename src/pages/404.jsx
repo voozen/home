@@ -6,7 +6,7 @@ const FourOhFour = () => {
       <Head>
         <title>Page not found</title>
       </Head>
-      <div className='container'>This page does not exist</div>
+      <div className='container'>This page does not exist.</div>
     </>
   );
 };
