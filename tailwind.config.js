@@ -12,5 +12,5 @@ module.exports = {
       padding: { DEFAULT: '1rem', md: '2rem' },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 };

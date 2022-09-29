@@ -13,7 +13,7 @@ body {
 
 /* hamburger */
 .active {
-  @apply right-0;
+  @apply translate-y-0;
 }
 
 .line {

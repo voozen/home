@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-const FourOhFour = () => {
+const FourOFour = () => {
   return (
     <>
       <Head>
@@ -11,4 +11,4 @@ const FourOhFour = () => {
   );
 };
 
-export default FourOhFour;
+export default FourOFour;

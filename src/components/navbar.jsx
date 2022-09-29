@@ -19,21 +19,25 @@ const Navbar = () => {
         document.documentElement.classList.add('dark');
   };
   return (
-    <header className='bg-slate-500 py-5 fixed w-full z-[100] top-0'>
+    <header className='bg-slate-500 py-5 fixed w-full top-0'>
       <nav className='container flex justify-between'>
-        <button onClick={toggleTheme}>toggle</button>
+        <button className='z-[100]' onClick={toggleTheme}>
+          toggle
+        </button>
         <Hamburger
-          className={`${toggle ? 'opened' : ''} md:hidden`}
+          className={`${toggle ? 'opened' : ''} z-[100] md:hidden`}
           onClick={() => setToggle(!toggle)}
         />
+
         <div
-          // make custom class transition-position
           className={`${
             toggle ? 'active' : ''
-          } flex flex-col w-[100vw] absolute -right-[100vw] transition-all duration-700 top-[70px] text-2xl bg-slate-500 py-10 h-screen gap-5 items-center md:flex md:static md:flex-row md:w-fit md:p-0 md:transition-none md:h-fit md:text-base`}
+          } flex flex-col absolute translate-y-[-100vh] transition-transform duration-700 right-0 left-0 top-[70px] text-2xl bg-slate-500 py-10 gap-5 items-center md:flex md:static md:flex-row md:w-fit md:p-0 md:transition-none md:h-fit md:text-base md:translate-y-0`}
         >
           {links.map(({ text, href }) => (
-            <Link href={href}>{text}</Link>
+            <Link href={href}>
+              <a onClick={() => setToggle(false)}>{text}</a>
+            </Link>
           ))}
         </div>
       </nav>
